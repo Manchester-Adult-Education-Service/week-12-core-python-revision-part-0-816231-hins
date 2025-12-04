@@ -37,6 +37,11 @@ print("-------------------------------------------\n"
 # 4. Print the final 'total_cost' using an f-string, formatted to two decimal places.
 
 # Write your code below:
+price=45.00
+VAT_RATE=0.20
+vat_amount= price*VAT_RATE
+total_cost=price+vat_amount
+print(f" The total cost = {total_cost:.2f}")
 
 
 # -------------------------------------------
@@ -70,7 +75,13 @@ print("\n-------------------------------------------\n"
 # 5. Otherwise (if total_cost is 60 or more), print "Purchase denied: Budget severely exceeded."
 
 # Write your code below:
-
+budget=50
+if total_cost<=budget:
+    print("Purchase approved: Within budget")
+elif total_cost>budget<60:
+    print("Warning: Purchase exceeds budget is manageable")
+else:
+    print("Purchase denied:Budget severely exceeded.")
 
 # -------------------------------------------
 # CHECKPOINT
@@ -108,11 +119,17 @@ print("\n-------------------------------------------\n"
 def calculate_area():
     # Insert try/except block here
     # Remember to handle the input() and int() conversions inside the try block
-    length = int(input("Enter rectangle length: "))
-    width = int(input("Enter rectangle width: "))
-    area = length * width
-    return area
+    try:
+        length = int(input("Enter rectangle length: "))
+        width = int(input("Enter rectangle width: "))
+        area = length * width
+        return area
+  
+        
     # Insert except block here
+    except ValueError:
+        print("Error: Please enter only numerical values.")
+        return 0
 
 # Call the function:
 rectangle_area = calculate_area()
@@ -154,6 +171,15 @@ weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
 # 5. Print both the 'total_sales' and 'average_sale', formatted to two decimal places.
 
 # Write your code below:
+total_sales=0
+for sales in weekly_sales:
+    total_sales=+ sale
+    numweeks=len(weekly_sales)
+    average_sale=total_sales
+    print(f"Total sale s: {total_sales:.2f}")
+    print(f"Average sale: {average_sale:.2f}")
+
+    #
 
 
 # -------------------------------------------
